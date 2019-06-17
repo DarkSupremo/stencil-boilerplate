@@ -1,5 +1,4 @@
 import { storiesOf } from '@storybook/html';
-
 import { text } from '@storybook/addon-knobs';
 
 storiesOf('My App', module).add('Example', () => {

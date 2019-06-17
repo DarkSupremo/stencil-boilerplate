@@ -13,6 +13,10 @@ export namespace Components {
     'first': string;
     'last': string;
   }
+  interface SimpleButton {
+    'color': 'plain' | 'primary' | 'secondary' | 'danger';
+    'type': 'basic' | 'raised' | 'outline' | 'flat';
+  }
 }
 
 declare global {
@@ -23,8 +27,15 @@ declare global {
     prototype: HTMLMyAppElement;
     new (): HTMLMyAppElement;
   };
+
+  interface HTMLSimpleButtonElement extends Components.SimpleButton, HTMLStencilElement {}
+  var HTMLSimpleButtonElement: {
+    prototype: HTMLSimpleButtonElement;
+    new (): HTMLSimpleButtonElement;
+  };
   interface HTMLElementTagNameMap {
     'my-app': HTMLMyAppElement;
+    'simple-button': HTMLSimpleButtonElement;
   }
 }
 
@@ -33,9 +44,14 @@ declare namespace LocalJSX {
     'first'?: string;
     'last'?: string;
   }
+  interface SimpleButton extends JSXBase.HTMLAttributes<HTMLSimpleButtonElement> {
+    'color'?: 'plain' | 'primary' | 'secondary' | 'danger';
+    'type'?: 'basic' | 'raised' | 'outline' | 'flat';
+  }
 
   interface IntrinsicElements {
     'my-app': MyApp;
+    'simple-button': SimpleButton;
   }
 }
 

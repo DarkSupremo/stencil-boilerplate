@@ -18,10 +18,66 @@
   <link rel="apple-touch-icon" href="/assets/icon/icon.png" />
   <link rel="icon" type="image/x-icon" href="/assets/icon/favicon.ico" />
   <link rel="manifest" href="/manifest.json" />
+
+  <style>
+    body {
+      text-align: center;
+      font-family: 'Roboto', sans-serif;
+    }
+
+    .container {
+      display: inline-block;
+    }
+  </style>
 </head>
 
 <body class="antialiased flex items-center justify-center min-h-screen">
-  <my-app first="Jag" last="Reehal"></my-app>
+  <div class="container">
+
+    <h1>Simple Buttons</h1>
+
+    <br><br>
+
+    <h3>Basic</h3>
+
+    <simple-button>Plain</simple-button>
+    <simple-button color="primary">Primary</simple-button>
+    <simple-button color="secondary">Secondary</simple-button>
+    <simple-button color="danger">Danger</simple-button>
+    <br>
+    <br>
+    <br>
+
+    <h3>Raised</h3>
+
+    <simple-button type="raised">Plain</simple-button>
+    <simple-button type="raised" color="primary">Primary</simple-button>
+    <simple-button type="raised" color="secondary">Secondary</simple-button>
+    <simple-button type="raised" color="danger">Danger</simple-button>
+    <br>
+    <br>
+    <br>
+
+    <h3>Outline</h3>
+
+    <simple-button type="outline">Plain</simple-button>
+    <simple-button type="outline" color="primary">Primary</simple-button>
+    <simple-button type="outline" color="secondary">Secondary</simple-button>
+    <simple-button type="outline" color="danger">Danger</simple-button>
+    <br>
+    <br>
+    <br>
+
+    <h3>Flat</h3>
+
+    <simple-button type="flat">Plain</simple-button>
+    <simple-button type="flat" color="primary">Primary</simple-button>
+    <simple-button type="flat" color="secondary">Secondary</simple-button>
+    <simple-button type="flat" color="danger">Danger</simple-button>
+    <br>
+    <br>
+
+  </div>
 </body>
 
 </html>

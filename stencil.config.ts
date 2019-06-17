@@ -1,5 +1,6 @@
 import { Config } from '@stencil/core';
 import { postcss } from '@stencil/postcss';
+import { sass } from '@stencil/sass';
 import autoprefixer from 'autoprefixer';
 
 const purgecss = require('@fullhuman/postcss-purgecss')({
@@ -21,6 +22,12 @@ export const config: Config = {
     }
   ],
   plugins: [
+    sass({
+      injectGlobalPaths: [
+        'src/global/variables.scss',
+        'src/global/mixins.scss'
+      ]
+    }),
     postcss({
       plugins: [
         require('tailwindcss')('./tailwind.config.js'),

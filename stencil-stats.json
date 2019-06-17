@@ -1,13 +1,13 @@
 {
   "compiler": {
     "name": "@stencil/core",
-    "version": "1.0.2"
+    "version": "1.0.4"
   },
   "app": {
     "namespace": "StencilApp",
     "fsNamespace": "stencil-app",
-    "components": 1,
-    "entries": 1,
+    "components": 2,
+    "entries": 2,
     "bundles": 0
   },
   "options": {
@@ -19,12 +19,37 @@
   },
   "components": [
     {
+      "tag": "simple-button",
+      "dependencyOf": [],
+      "dependencies": []
+    },
+    {
       "tag": "my-app",
       "dependencyOf": [],
       "dependencies": []
     }
   ],
   "entries": [
+    {
+      "entryId": "simple-button.entry",
+      "components": [
+        {
+          "tag": "simple-button",
+          "dependencyOf": [],
+          "dependencies": []
+        }
+      ],
+      "bundles": [],
+      "inputs": [
+        "D:/programacao_local/javascript/stencil-boilerplate/src/components/simple-button/simple-button.tsx"
+      ],
+      "modes": [
+        "$"
+      ],
+      "encapsulations": [
+        "shadow"
+      ]
+    },
     {
       "entryId": "my-app.entry",
       "components": [
@@ -36,7 +61,7 @@
       ],
       "bundles": [],
       "inputs": [
-        "/Users/jreehal/MEGA/js/s/stencil-boilerplate/src/components/my-app/my-app.tsx"
+        "D:/programacao_local/javascript/stencil-boilerplate/src/components/my-app/my-app.tsx"
       ],
       "modes": [
         "$"
@@ -48,7 +73,8 @@
   ],
   "sourceGraph": {
     "src/components/my-app/my-app.stories.tsx": [],
-    "src/components/my-app/my-app.tsx": []
+    "src/components/my-app/my-app.tsx": [],
+    "src/components/simple-button/simple-button.tsx": []
   },
   "collections": []
 }
